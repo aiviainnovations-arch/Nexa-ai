@@ -1,6 +1,4 @@
 # Nexa AI — AIVA portfolio concept
-![Uploading Screenshot 2026-09-22 123641.png…]()
-
 
 A fictional, premium AI SaaS product built to demonstrate AIVA's design and frontend
 capabilities: cinematic 3D-style hero, a working interactive AI workspace demo, animated
