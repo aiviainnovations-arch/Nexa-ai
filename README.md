@@ -1,128 +1,219 @@
-# Nexa AI — AIVA portfolio concept
+<div align="center">
 
-A fictional, premium AI SaaS product built to demonstrate AIVA's design and frontend
-capabilities: cinematic 3D-style hero, a working interactive AI workspace demo, animated
-dashboards and analytics, and four generated cinematic background videos.
+# Nexa AI
 
-**Stack:** React + Vite + TypeScript + Tailwind CSS + Framer Motion.
+**Turn data into intelligence.**
 
-Everything on the site is fictional demo content for a portfolio piece — see `src/data/demo.ts`.
+A fictional, premium AI SaaS product concept with a cinematic hero, a working interactive AI workspace demo and animated dashboards.
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-05070D?style=for-the-badge)](https://aiviainnovations-arch.github.io/Nexa-ai/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2563EB?style=for-the-badge)](LICENSE)
+
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?logo=framer&logoColor=white)
+
+<img src="public/posters/screenshots/Screenshot%202026-10-01%20034902.png" alt="Nexa AI hero: Turn data into intelligence" width="900">
+
+</div>
+
+> **Disclaimer:** Nexa AI is not a real product. All metrics, names and scenarios are fictional demo content (see `src/data/demo.ts`). There is no real authentication, billing, database or backend, and no compliance or certification badges (SOC 2, ISO, GDPR and so on) are shown or claimed.
 
 ---
 
-## 1. Setup
+## Table of contents
+
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Project structure](#project-structure)
+- [Customisation](#customisation)
+- [Performance and mobile](#performance-and-mobile)
+- [Cinematic videos](#cinematic-videos)
+- [Deploying](#deploying)
+- [License](#license)
+
+---
+
+## Overview
+
+Nexa AI is a single-page landing site for an imaginary AI workspace that helps teams analyse information, automate repetitive work and turn complex data into actionable insights. It was built by Aivia Innovations to show design and frontend range in the AI SaaS space: a dark, deep-navy interface with azure, iris and aqua accents, animated analytics, and an interactive workspace you can actually use.
+
+## Screenshots
+
+### Hero
+
+<p align="center">
+  <img src="public/posters/screenshots/Screenshot%202026-10-01%20034902.png" alt="Hero with floating data, analytics, insights and automation cards around the Nexa logo" width="900">
+</p>
+
+<sub>A 3D-style hero: floating product cards around the Nexa mark, layered over a particle field.</sub>
+
+### Product dashboard and AI workspace
+
+<table>
+  <tr>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034919.png" alt="AI Overview dashboard with live metrics"><br><sub><b>Product dashboard</b> - animated metrics, AI insight and recommended next actions</sub></td>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034951.png" alt="Interactive AI workspace demo"><br><sub><b>AI workspace</b> - pick a prompt or type your own and watch Nexa respond</sub></td>
+  </tr>
+</table>
+
+### Features and solutions
+
+<table>
+  <tr>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034924.png" alt="Six capabilities, one workspace"><br><sub><b>Features</b> - six capabilities in one workspace</sub></td>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034930.png" alt="Six capabilities built around your team"><br><sub><b>Solutions</b> - pick a team to see which capabilities do the work</sub></td>
+  </tr>
+</table>
+
+### How it works and closing call to action
+
+<table>
+  <tr>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034934.png" alt="From information to action: Connect, Analyze, Understand, Act"><br><sub><b>Workflow</b> - Connect, Analyze, Understand, Act</sub></td>
+    <td width="50%"><img src="public/posters/screenshots/Screenshot%202026-10-01%20034939.png" alt="Ready to build what's next call to action"><br><sub><b>Call to action</b> - closing section and portfolio links</sub></td>
+  </tr>
+</table>
+
+---
+
+## Features
+
+- **Cinematic 3D-style hero** with floating product cards and a particle canvas
+- **Interactive AI workspace demo:** choose a prompt or type your own and watch a simulated analysis play out
+- **Animated dashboards and analytics** with counters, sparklines and SVG charts, with no chart library
+- **Solutions explorer:** switch teams (customer support, operations, finance and more) to see tailored scenarios
+- **Four cinematic background videos** (mp4 and webm) with poster fallbacks
+- **Lite mode on phones:** fewer particles, simpler hero, no cursor effects, videos replaced by posters
+- **Respects "Reduce motion"** at the OS level
+- **All content in data files:** metrics, copy, scenarios and workflow steps live in `src/data/demo.ts`
+
+## Tech stack
+
+| Area | Tools |
+| --- | --- |
+| Framework | React 18, TypeScript |
+| Build | Vite 5 |
+| Styling | Tailwind CSS 3, PostCSS |
+| Animation | Framer Motion |
+| Charts | Custom SVG path helpers (`src/lib/chart.ts`) |
+| Fonts | Inter Tight, Inter and JetBrains Mono |
+
+## Getting started
 
 Requires **Node.js 18+**.
 
 ```bash
-cd nexa-ai
+git clone https://github.com/aiviainnovations-arch/Nexa-ai.git
+cd Nexa-ai
+
 npm install
-npm run dev
+npm run dev      # usually http://localhost:5173
 ```
 
-Open the URL that Vite prints (usually `http://localhost:5173`).
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run typecheck` | TypeScript check, no emit |
 
-Other commands:
+## Project structure
 
-```bash
-npm run build      # production build -> dist/
-npm run preview    # preview the production build locally
-npm run typecheck  # TypeScript check, no emit
-```
-
-## 2. Folder structure
-
-```
-nexa-ai/
-├── index.html                 SEO meta, fonts, favicon
+```text
+├── index.html                 # SEO meta, fonts, favicon
 ├── public/
-│   ├── videos/                4 cinematic background videos (mp4 + webm)
-│   ├── posters/                poster/fallback images for each video
+│   ├── videos/                # 4 cinematic background videos (mp4 + webm)
+│   ├── posters/               # poster and fallback images (and README screenshots)
 │   ├── favicon.svg
-│   └── og-image.jpg           Open Graph share image
+│   └── og-image.jpg           # Open Graph share image
 ├── src/
-│   ├── main.tsx / App.tsx     entry point, section composition, code-splitting
-│   ├── index.css              design tokens, base styles, reduced-motion rules
+│   ├── main.tsx / App.tsx     # entry point, section composition, code-splitting
+│   ├── index.css              # design tokens, base styles, reduced-motion rules
 │   ├── config/
-│   │   ├── site.ts            brand copy, nav links, AIVA links, performance switches
-│   │   └── videos.ts          which cinematic videos are enabled + their filenames
-│   ├── data/demo.ts           ALL fictional demo content (metrics, copy, scenarios…)
-│   ├── hooks/                 useMediaQuery/useLite, useSpotlight
-│   ├── lib/chart.ts           small SVG chart-path helpers (no chart library needed)
+│   │   ├── site.ts            # brand copy, nav links, portfolio links, performance switches
+│   │   └── videos.ts          # which videos are enabled and their filenames
+│   ├── data/demo.ts           # ALL fictional demo content
+│   ├── hooks/                 # useMediaQuery / useLite, useSpotlight
+│   ├── lib/chart.ts           # small SVG chart-path helpers
 │   ├── components/
-│   │   ├── ui/                Button, Icon, Logo, Reveal, Tilt, Magnetic, Counter…
-│   │   ├── hero/               the 3D-style hero Scene + particle canvas
-│   │   ├── Nav.tsx, Footer.tsx, CinematicVideo.tsx
-│   └── sections/               one file per landing-page section (Hero, ProductDashboard,
-│                                Solutions, Workspace, Features, Workflow, Analytics,
-│                                Security, CTA)
-├── tailwind.config.js          colour system, fonts, keyframes
+│   │   ├── ui/                # Button, Icon, Logo, Reveal, Tilt, Magnetic, Counter...
+│   │   ├── hero/              # 3D-style hero scene and particle canvas
+│   │   └── Nav, Footer, CinematicVideo
+│   └── sections/              # Hero, ProductDashboard, Solutions, Workspace,
+│                              # Features, Workflow, Analytics, Security, CTA
+├── tailwind.config.js         # colour system, fonts, keyframes
 ├── vite.config.ts
-└── VIDEO_PROMPTS.md            how to swap in real AI-generated video + ready prompts
+└── VIDEO_PROMPTS.md           # how to swap in real AI-generated video
 ```
 
-## 3. How to change things
+## Customisation
 
-**Text, numbers, demo data** — edit `src/data/demo.ts`. Every metric, chip, chart series,
-recommendation and workflow step used across the whole site lives in this one file.
+**Text, numbers and demo data.** Edit `src/data/demo.ts`. Every metric, chip, chart series, recommendation and workflow step on the site lives in this one file.
 
-**Brand copy, nav links, AIVA contact links** — edit `src/config/site.ts`. Search for
-`REPLACE` to find the placeholder links (`aiva.contactUrl`, `aiva.workUrl`, `aiva.websiteUrl`)
-and put your real ones in.
+**Brand copy and links.** Edit `src/config/site.ts`. Search for `REPLACE` to find the placeholder links (`aiva.contactUrl`, `aiva.workUrl`, `aiva.websiteUrl`) and put your real ones in.
 
-**Colours / fonts / spacing** — edit `tailwind.config.js` (the `colors` block) and
-`src/index.css` (`@layer components` for reusable surface styles like `.glass`).
+**Colours and fonts.** Edit the `colors` block in `tailwind.config.js` and the reusable surface styles (such as `.glass`) in `src/index.css`. The palette:
 
-**Images** — the favicon is `public/favicon.svg` (inline gradient mark). The Open Graph share
-image is `public/og-image.jpg`, regenerate it however you like and keep the same filename.
-Poster images for each video are in `public/posters/`.
+| Token | Hex | Use |
+| --- | --- | --- |
+| `ink` | `#05070D` | Page background |
+| `navy` | `#0B1020` | Secondary surface |
+| `panel` | `#111827` | Raised surface |
+| `azure` | `#2563EB` | Primary accent |
+| `iris` | `#7C3AED` | Secondary accent |
+| `aqua` | `#22D3EE` | Live-data accent |
+| `mist` | `#F3F5FA` | Primary text |
+| `steel` | `#8A94A8` | Secondary text |
 
-**Videos** — see `VIDEO_PROMPTS.md`. Short version: drop replacement `.mp4`/`.webm` files into
-`public/videos/` using the same filenames, no code changes required.
+**Images.** The favicon is `public/favicon.svg`. The share image is `public/og-image.jpg`; regenerate it and keep the filename. Video posters live in `public/posters/`.
 
-## 4. Disabling/adjusting heavy 3D and effects on mobile
+## Performance and mobile
 
-Performance behaviour is centralised in `src/config/site.ts`:
+Behaviour is centralised in `src/config/site.ts`:
 
 ```ts
 performance: {
-  liteEnabled: true,     // turn off entirely to force the full effect on all screens
-  liteBelow: 768,        // viewport width (px) below which the "lite" mode kicks in
+  liteEnabled: true,     // set false to force the full effect on all screens
+  liteBelow: 768,        // viewport width (px) below which lite mode starts
   particlesDesktop: 56,  // particle count on larger screens
   particlesLite: 22,     // particle count in lite mode
 },
 ```
 
-In "lite" mode (phones, by default): the hero 3D scene uses a smaller, simpler card layout,
-the particle field uses fewer particles, cursor-follow/tilt/magnetic effects are disabled
-(they check for a fine pointer via `useFinePointer`), and background videos are skipped in
-favour of the poster image (unless a slot sets `playOnMobile: true` in `src/config/videos.ts`).
+In lite mode the hero uses a smaller card layout, the particle field uses fewer particles, cursor-follow, tilt and magnetic effects are disabled, and background videos fall back to their poster image unless a slot sets `playOnMobile: true` in `src/config/videos.ts`.
 
-The whole site also fully respects the OS-level **"Reduce motion"** accessibility setting —
-when it's on, animations are minimized or skipped everywhere automatically.
+## Cinematic videos
 
-## 5. Deploying
+The four background videos are generated placeholders. To replace them with your own AI-generated clips, drop `.mp4` / `.webm` files into `public/videos/` using the same filenames; no code changes are needed. Ready-to-paste prompts for Veo, Sora, Gemini, Runway and others are in [`VIDEO_PROMPTS.md`](VIDEO_PROMPTS.md).
 
-This is a static site — `npm run build` outputs a `dist/` folder you can host anywhere
-(Vercel, Netlify, Cloudflare Pages, GitHub Pages, S3, etc.).
+## Deploying
 
-**Vercel / Netlify:** point the project at this repo, build command `npm run build`, output
-directory `dist`. No configuration needed.
+The build is a static `dist/` folder that works on any static host. The repo includes a GitHub Actions workflow in `.github/workflows/`.
 
-**A sub-path (e.g. GitHub Pages at `/nexa-ai/`):** build with the base path set:
+**GitHub Pages.** `vite.config.ts` sets the base path to match this repository:
 
-```bash
-VITE_BASE=/nexa-ai/ npm run build
+```ts
+base: '/Nexa-ai/',
 ```
 
-## 6. Replacing placeholder videos with your own AI-generated ones
+Change it if you rename the repo, and use `'/'` for a custom domain or a `<username>.github.io` site. Then enable **Settings → Pages → Source: GitHub Actions** and push to `main`.
 
-Full instructions and ready-to-paste prompts (Veo, Sora, Gemini, Runway, etc.) are in
-[`VIDEO_PROMPTS.md`](./VIDEO_PROMPTS.md).
+**Vercel, Netlify, Cloudflare Pages.** Build command `npm run build`, output directory `dist`. Set `base: '/'` first.
 
-## 7. Notes
+## License
 
-- All product data, metrics and names are fictional demo content for this portfolio piece.
-- No real authentication, billing, database or backend is included, by design — see the
-  original project brief for why.
-- No compliance/certification badges (SOC 2, ISO, GDPR, etc.) are shown or claimed anywhere.
+Released under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+Designed and built by **Aivia Innovations**. Nexa AI is a fictional concept.
+
+</div>
